@@ -34,6 +34,11 @@ $ rosdep install --from-paths . --ignore-src --rosdistro indigo
 ---
 ## Usage
 
+
+```bash
+$ roslaunch cob_twist_controller test_cobot_IKsolver.launch
+```
+
 ### Forward Kinematics
 ............
 ............
