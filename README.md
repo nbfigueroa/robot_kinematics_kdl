@@ -3,8 +3,7 @@
 ---
 ## System Requirements
 * This code was written for ROS Indigo in Ubuntu 14.04.
-* It works out-of-the-box on ROS Kinetic in Ubuntu 16.04
-* ROS Melodic on Ubuntu 18.08 needs to be tested
+* Still needs to be tested on ROS Kinetic in Ubuntu 16.04 and ROS Melodic on Ubuntu 18.08
 
 ## Installation, Dependencies and Compilation
 Do the following steps:
