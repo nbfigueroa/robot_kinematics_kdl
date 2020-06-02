@@ -1,6 +1,6 @@
 ## robot_kinematics_kdl
 
-This library includes KDL operations to compute the forwards kinematics and Jacobian of a robotic arm. 
+This library includes KDL operations to compute the forwards kinematics and Jacobian of a robotic arm using the URDF representation of the robot (no DH parameters necessary). 
 
 It also contains a stripped-down version of the [cob_twist_controller](http://wiki.ros.org/cob_twist_controller) which is a package that contains several implemented inverse kinematics approaches at the velocity level. Namely, given a desired cartesian velocity or twits it maps them to joint velocities we use the low-level velocitis with either of the following approaches:
 
