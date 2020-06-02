@@ -1,5 +1,14 @@
 ## robot_kinematics_kdl
 
+This library includes KDL operations to compute the forwards kinematics and Jacobian of a robotic arm. It also contains a stripped-down version of the [cob_twist_controller](http://wiki.ros.org/cob_twist_controller) which is a package that contains several implemented inverse kinematics approaches at the velocity level. Namely, given a desired cartesian velocity or twits it maps them to joint velocities we use the low-level velocitis with either of the following approaches:    
+         - WLN:  "Weighted-least-norm base, with identity as weighting matrix (equal to None)"
+         - GPM:  "Gradient-projection-method"
+         - STACK_OF_TASKS:  "Task Priority Strategy for all with dynamic resadjust of GPM and task ..."
+         - TASK_2ND_PRIO: "Task Priority Strategy for obstacle avoidance ..."
+         - UNIFIED_JLA_SA: "Inv Kinematics solver based on unified weighted least norm and sigmoid weighting functions"
+
+Selecting the IK approach and tuning parameters can be done via [dynamic reconfigure GUI](http://wiki.ros.org/rqt_reconfigure) defined in ``/cfg/TwistController.cfg`` or changing the parameters in the configuration yaml file ``config/  
+    
 ---
 ## System Requirements
 * This code was written for ROS Indigo in Ubuntu 14.04.
@@ -51,5 +60,6 @@ $ roslaunch cob_twist_controller test_cobot_IKsolver.launch
 Maintainer: [Nadia Figueroa ](https://nbfigueroa.github.io/)(nadiafig @ mit dot edu)
 
 ## License
+- The original version of the IK implementations taken from [cob_twist_controller](http://wiki.ros.org/cob_twist_controller) were licensed under Apache 2.0. 
 - This code is released under MIT license.
 
